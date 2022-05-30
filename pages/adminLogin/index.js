@@ -1,21 +1,18 @@
+import nookies from 'nookies';
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header from '../components/header'
+// import Image from 'next/image'
+import styles from '../../styles/Home.module.css'
+import Header from '../../components/header'
 import Script from 'next/script'
 // import Course from '../components/upcoming'
-import {getMeData} from '../components/upcoming'
-import Boxes from '../components/boxes'
-import Footer from '../components/footer'
-import Link from 'next/link'
-import Upcoming from './/../components/upcoming'
-// import Details from './details'
-// const UpcomingComponent =(() =>
-// import('../components/upcoming').then((mod) => mod.getMeData)
-// )
+// import {getMeData} from '../components/upcoming'
+// import Boxes from '../components/boxes'
+import Footer from '../../components/footer'
+import LoginComponent from '../../components/loginComponent';
+import { useRouter } from 'next/router';
 
 
-export default function Home() {
+export function LoginPage() {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,13 +24,11 @@ export default function Home() {
       <Header></Header>
       
       <main className={styles.main}>
-        <div className="coming-soon_h1">
-        <h1>Kommer snart</h1>
-        </div>
+       
       
-     <Upcoming></Upcoming>
+      <LoginComponent></LoginComponent>
      
-      <Boxes></Boxes>
+      
        
       </main>
       
@@ -47,3 +42,41 @@ export default function Home() {
     </div>
   )
 }
+
+
+export const getServerSideProps = async (ctx) => {
+    const cookies = nookies.get(ctx)
+    let user = null;
+  
+    if (cookies?.jwt) {
+      try {
+        const { data } = await 
+  axios.get('http://localhost:1337/users/me', {
+          headers: {
+            Authorization:
+              `Bearer ${cookies.jwt}`,
+            },
+        });
+        user = data;
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  
+    if (user) {
+      return {
+        redirect: {
+          permanent: false,
+          destination: '/INSER DESTINATION'
+        }
+      }
+    }
+  
+    return {
+      props: {}
+    }
+  }
+  
+  export default LoginPage;
+
+  

@@ -1,18 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header from '../components/header'
+import styles from '../../styles/Home.module.css'
+import Header from '../../components/header'
 import Script from 'next/script'
-// import Course from '../components/upcoming'
-import {getMeData} from '../components/upcoming'
-import Boxes from '../components/boxes'
-import Footer from '../components/footer'
+import { GetMeDetails } from '../../components/details'
+import Footer from '../../components/footer'
 import Link from 'next/link'
-import Upcoming from './/../components/upcoming'
-// import Details from './details'
-// const UpcomingComponent =(() =>
-// import('../components/upcoming').then((mod) => mod.getMeData)
-// )
+import Course from '../../components/details'
+import ContactForm from '../../components/contactForm'
 
 
 export default function Home() {
@@ -26,20 +21,23 @@ export default function Home() {
 
       <Header></Header>
       
-      <main className={styles.main}>
-        <div className="coming-soon_h1">
-        <h1>Kommer snart</h1>
-        </div>
-      
-     <Upcoming></Upcoming>
+      <main className="kontakt-oss_main">
+          <h1>Kontakt oss</h1>
+          <h3>Villa SULT</h3>
+          <h3>Kruses gate 8</h3>
+          <h3>0263 Oslo</h3>
+          <br></br>
+          <h3>post@villasult.no</h3>
+     <ContactForm></ContactForm>
      
-      <Boxes></Boxes>
+     
        
       </main>
       
       <Footer></Footer>
      
       <div className="container">
+      <Script src="https://unpkg.com/formik/dist/formik.umd.production.min.js"></Script>
 <Script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></Script>
 <Script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></Script>
 <Script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></Script>
@@ -47,3 +45,4 @@ export default function Home() {
     </div>
   )
 }
+

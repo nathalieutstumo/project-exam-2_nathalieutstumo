@@ -1,18 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header from '../components/header'
+import styles from '../../styles/Home.module.css'
+import Header from '../../components/header'
 import Script from 'next/script'
 // import Course from '../components/upcoming'
-import {getMeData} from '../components/upcoming'
-import Boxes from '../components/boxes'
-import Footer from '../components/footer'
+// import {getMeData} from '../components/upcoming'
+// import Boxes from '../components/boxes'
+import Footer from '../../components/footer'
+import OmOss from '../../components/omOss'
 import Link from 'next/link'
-import Upcoming from './/../components/upcoming'
-// import Details from './details'
-// const UpcomingComponent =(() =>
-// import('../components/upcoming').then((mod) => mod.getMeData)
-// )
 
 
 export default function Home() {
@@ -27,13 +23,7 @@ export default function Home() {
       <Header></Header>
       
       <main className={styles.main}>
-        <div className="coming-soon_h1">
-        <h1>Kommer snart</h1>
-        </div>
-      
-     <Upcoming></Upcoming>
-     
-      <Boxes></Boxes>
+    <OmOss></OmOss>
        
       </main>
       

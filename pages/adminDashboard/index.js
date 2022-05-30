@@ -1,18 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header from '../components/header'
+import styles from '../../styles/Home.module.css'
+import AdminHeader from '../../components/header/adminHeader'
 import Script from 'next/script'
 // import Course from '../components/upcoming'
-import {getMeData} from '../components/upcoming'
-import Boxes from '../components/boxes'
-import Footer from '../components/footer'
+// import {getMeData} from '../components/upcoming'
+// import Boxes from '../components/boxes'
+import Footer from '../../components/footer'
 import Link from 'next/link'
-import Upcoming from './/../components/upcoming'
-// import Details from './details'
-// const UpcomingComponent =(() =>
-// import('../components/upcoming').then((mod) => mod.getMeData)
-// )
+import AdminDashboard from '../../components/adminDashbord'
+import AllCoursesList from '../../components/adminCourseList'
 
 
 export default function Home() {
@@ -24,17 +21,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header></Header>
+      <AdminHeader></AdminHeader>
       
-      <main className={styles.main}>
-        <div className="coming-soon_h1">
-        <h1>Kommer snart</h1>
-        </div>
-      
-     <Upcoming></Upcoming>
-     
-      <Boxes></Boxes>
-       
+      <main className="admin-main">
+    <AdminDashboard></AdminDashboard>
+    <div className="admin-courses_list"></div>
       </main>
       
       <Footer></Footer>
