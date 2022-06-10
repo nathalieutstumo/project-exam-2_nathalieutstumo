@@ -79,8 +79,6 @@ In the root of the project you will also find a components folder which contains
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+[My Instagram page](https://www.instagram.com/nathalieutstumo/)
 
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
+Email: nathalie.utstumo@gmail.com
