@@ -1,4 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Villa SULT - project exam 2
+
+![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+
+## Description
+
+Villa SULT is an informative site for an eating disorder clinic who has courses for both health personal and people that are affected and close to someone with an eating disorder.
+
+## Built With
+
+Dependencies used in the project:
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [Axios](https://axios-http.com/)
+- [Nookies](https://github.com/maticzav/nookies)
+- [Formik](https://formik.org/)
+- [Yup](https://github.com/jquense/yup)
 
 ## Getting Started
 
@@ -12,23 +29,58 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Installing
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Clone the repo:
 
-## Learn More
+```bash
+git clone git@github.com:NoroffFEU/portfolio-1-example.git
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install the dependencies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm install next react react-dom
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm install axios
+```
 
-## Deploy on Vercel
+```
+npm install nookies
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+npm install formik -- save
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm install yup
+```
+
+### Running
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
+## Contributing
+
+The project is utilising next.js and global styling in a global.css file. The folder structure is simple with all pages in a folder with the same name, that can be found in the root of the project, and contains folders for each page on the site. All the page folders contain an index.js file where the main code for that page is found. In the pages/details folder there is also a [ id ].js file which is used to fetch the id’s from the api. The pages/api folder contains login.js and logout.js which is used for logging in and out from the admin section.
+
+There is an img folder in the root with the images that are used in the boxes on the homepage and the logo.
+
+In the root of the project you will also find a components folder which contains folders that are pretty self-explanatory. The api is down so if you want the code that passes the api information to work you will have to use another api and change the code accordingly so you get the information.
+
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My Twitter page](www.twitter.com)
+
+[My LinkedIn page](www.linkedin.com)
